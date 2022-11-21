@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.CONNECT, {useNewUrlParser: true});
+mongoose.connect("process.env.CONNECT", {useNewUrlParser: true});
 
 const itemsSchema = {
   name: String
