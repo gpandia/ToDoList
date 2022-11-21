@@ -13,7 +13,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-gokul:"+process.env.CONNECT+"@cluster0.nqdhlkp.mongodb.net/todolistDB", {useNewUrlParser: true});
+const pwd = process.env.CONNECT;
+mongoose.connect("mongodb+srv://admin-gokul:"+ pwd +"@cluster0.nqdhlkp.mongodb.net/todolistDB", {useNewUrlParser: true});
 
 const itemsSchema = {
   name: String
